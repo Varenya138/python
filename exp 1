@@ -1,0 +1,28 @@
+# Type checking
+variable_int = 42
+variable_float = 3.14
+variable_string = "Hello, World!"
+variable_list = [1, 2, 3, 4, 5]
+variable_dict = {'a': 1, 'b': 2}
+variable_bool = True
+
+# Demonstrate type checking using type()
+print(f"Type of variable_int: {type(variable_int)}")
+print(f"Type of variable_float: {type(variable_float)}")
+print(f"Type of variable_string: {type(variable_string)}")
+print(f"Type of variable_list: {type(variable_list)}")
+print(f"Type of variable_dict: {type(variable_dict)}")
+print(f"Type of variable_bool: {type(variable_bool)}")
+
+# Demonstrate built-in functions
+print(f"\nAbsolute value of -5: {abs(-5)}")
+print(f"Length of variable_list: {len(variable_list)}")
+print(f"Minimum value in variable_list: {min(variable_list)}")
+print(f"Rounded value of variable_float: {round(variable_float)}")
+
+# isalnum() checks if all characters in a string are alphanumeric
+alphanumeric_string = "abc123"
+non_alphanumeric_string = "abc 123"
+
+print(f"\nIs {alphanumeric_string} alphanumeric? {alphanumeric_string.isalnum()}")
+print(f"Is {non_alphanumeric_string} alphanumeric? {non_alphanumeric_string.isalnum()}")
