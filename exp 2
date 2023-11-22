@@ -1,0 +1,18 @@
+# Iteration over a list
+fruits = ["apple", "banana", "orange", "grape"]
+
+print("Iterating over a list:")
+for fruit in fruits:
+    print(f"Fruit: {fruit}")
+
+# Iteration over a dictionary
+person_info = {
+    "name": "John",
+    "age": 25,
+    "city": "New York",
+    "gender": "Male"
+}
+
+print("\nIterating over a dictionary:")
+for key, value in person_info.items():
+    print(f"{key}: {value}")
