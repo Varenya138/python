@@ -1,0 +1,14 @@
+# Given string
+input_string = "Welcome to Python world"
+
+# Count the number of alphabets in the given string
+num_alphabets = sum(c.isalpha() for c in input_string)
+print(f"Number of alphabets in the string: {num_alphabets}")
+
+# Extract characters in the given range (from index 8 to 14)
+extracted_range = input_string[8:15]
+print(f"Characters in the range [8, 14): {extracted_range}")
+
+# Check if the string is alphanumeric or not
+is_alphanumeric = input_string.isalnum()
+print(f"Is the string alphanumeric? {is_alphanumeric}")
