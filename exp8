@@ -1,0 +1,26 @@
+def celsius_to_fahrenheit(celsius):
+    """
+    Convert temperature from Celsius to Fahrenheit.
+    """
+    fahrenheit = (celsius * 9/5) + 32
+    return fahrenheit
+
+def fahrenheit_to_celsius(fahrenheit):
+    """
+    Convert temperature from Fahrenheit to Celsius.
+    """
+    celsius = (fahrenheit - 32) * 5/9
+    return celsius
+
+# Example usage:
+if __name__ == "__main__":
+    # Convert Celsius to Fahrenheit
+    celsius_temperature = 25
+    fahrenheit_result = celsius_to_fahrenheit(celsius_temperature)
+    print("{} degrees Celsius is equal to {} degrees Fahrenheit.".format(celsius_temperature, fahrenheit_result))
+
+    # Convert Fahrenheit to Celsius
+    fahrenheit_temperature = 77
+    celsius_result = fahrenheit_to_celsius(fahrenheit_temperature)
+    print("{} degrees Fahrenheit is equal to {} degrees Celsius.".format(fahrenheit_temperature, celsius_result))
+

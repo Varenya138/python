@@ -1,0 +1,40 @@
+def add_student(records, name, roll_number, grade):
+    """
+    Add a new student record to the list of records.
+    """
+    student = {'name': name, 'roll_number': roll_number, 'grade': grade}
+    records.append(student)
+
+def search_student(records, name):
+    """
+    Search for a student record by name.
+    """
+    for student in records:
+        if student['name'] == name:
+            return student
+    return None
+
+# Example usage:
+if __name__ == "__main__":
+    # Initialize an empty list to store student records
+    student_records = []
+
+    # Add some student records
+    add_student(student_records, 'Alice', 'A001', 'A')
+    add_student(student_records, 'Bob', 'A002', 'B')
+    add_student(student_records, 'Charlie', 'A003', 'C')
+
+    # Print the list of student records
+    print("List of Student Records:")
+    for student in student_records:
+        print(student)
+
+    # Search for a student record by name
+    search_name = 'Bob'
+    result = search_student(student_records, search_name)
+
+    # Print the search result
+    if result:
+        print("\nStudent Record found for {}: {}".format(search_name, result))
+    else:
+        print("\nStudent Record not found for {}".format(search_name))

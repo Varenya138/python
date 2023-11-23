@@ -1,0 +1,27 @@
+# Create a database using lists and tuples
+book_database = []
+
+# Function to add a new book to the database
+def add_book(database, title, author, year):
+    book = (title, author, year)
+    database.append(book)
+    print("Book added to the database.")
+
+# Function to display all books in the database
+def display_books(database):
+    if not database:
+        print("The database is empty.")
+    else:
+        print("Books in the database:")
+        for book in database:
+            print("Title: {}, Author: {}, Year: {}".format(book[0], book[1], book[2]))
+
+# Example usage:
+if __name__ == "__main__":
+    # Add books to the database
+    add_book(book_database, "The Great Gatsby", "F. Scott Fitzgerald", 1925)
+    add_book(book_database, "To Kill a Mockingbird", "Harper Lee", 1960)
+    add_book(book_database, "1984", "George Orwell", 1949)
+
+    # Display all books in the database
+    display_books(book_database)

@@ -1,0 +1,47 @@
+class Employee:
+    def __init__(self, emp_id, name, salary):
+        self.emp_id = emp_id
+        self.name = name
+        self.salary = salary
+
+    def display_info(self):
+        print("Employee ID: {}".format(self.emp_id))
+        print("Name: {}".format(self.name))
+        print("Salary: ${}".format(self.salary))
+
+class Manager(Employee):
+    def __init__(self, emp_id, name, salary, department):
+        super().__init__(emp_id, name, salary)
+        self.department = department
+
+    def display_info(self):
+        super().display_info()
+        print("Department: {}".format(self.department))
+        print("Role: Manager")
+
+class Developer(Employee):
+    def __init__(self, emp_id, name, salary, programming_language):
+        super().__init__(emp_id, name, salary)
+        self.programming_language = programming_language
+
+    def display_info(self):
+        super().display_info()
+        print("Programming Language: {}".format(self.programming_language))
+        print("Role: Developer")
+
+# Example usage:
+if __name__ == "__main__":
+    # Creating instances of Employee, Manager, and Developer
+    employee1 = Employee(1, "John Doe", 50000)
+    manager1 = Manager(2, "Jane Smith", 70000, "Human Resources")
+    developer1 = Developer(3, "Alice Johnson", 60000, "Python")
+
+    # Displaying information about employees
+    print("Employee Information:")
+    employee1.display_info()
+
+    print("\nManager Information:")
+    manager1.display_info()
+
+    print("\nDeveloper Information:")
+    developer1.display_info()
